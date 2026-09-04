@@ -707,6 +707,7 @@ function rerenderSized() {
   renderLower();
   bindUI();
   bindTooltips();
+  if (window.matchMedia('(max-width: 900px)').matches) $('.app').classList.add('sidebar-collapsed');
   // sized renders after layout + fonts
   rerenderSized();
   if (document.fonts && document.fonts.ready) document.fonts.ready.then(rerenderSized);
